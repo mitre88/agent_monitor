@@ -1,0 +1,10 @@
+{
+  "name": "agent-monitor-office",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js"
+  }
+}

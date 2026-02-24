@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Monitor 3D Local</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="app-shell">
+      <canvas id="office-canvas"></canvas>
+
+      <div class="hud-layer">
+        <header class="panel hud-topbar">
+          <div class="title-block">
+            <p class="eyebrow">Oficina Virtual de Agentes</p>
+            <h1>Agent Monitor 3D</h1>
+            <p class="subtitle">Visualiza en tiempo real que hace cada agente y con quien colabora.</p>
+          </div>
+
+          <div class="topbar-right">
+            <div id="connection-pill" class="connection-pill offline">
+              <span class="status-dot"></span>
+              <span id="connection-text">Conectando...</span>
+            </div>
+
+            <div class="metrics-grid">
+              <article class="metric-card">
+                <span class="metric-label">Online</span>
+                <strong id="metric-online">0</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Trabajando</span>
+                <strong id="metric-working">0</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Colaborando</span>
+                <strong id="metric-collab">0</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Totales</span>
+                <strong id="metric-total">0</strong>
+              </article>
+            </div>
+          </div>
+        </header>
+
+        <aside class="panel left-panel">
+          <div class="panel-head">
+            <h2>Agentes en Oficina</h2>
+            <span id="agents-count">0 detectados</span>
+          </div>
+          <div id="agent-list" class="agent-list"></div>
+        </aside>
+
+        <aside class="panel right-panel">
+          <div class="panel-head">
+            <h2>Timeline de Actividad</h2>
+            <span>Eventos recientes</span>
+          </div>
+          <div id="event-list" class="event-list"></div>
+        </aside>
+
+        <section class="panel bottom-panel">
+          <div class="panel-head">
+            <h2>Detalle del Agente Seleccionado</h2>
+            <span id="selected-id">sin seleccion</span>
+          </div>
+          <div id="selected-content" class="selected-content"></div>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
