@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="50%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    
+    <!-- Agent gradients -->
+    <linearGradient id="gradClaude" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8C42"/>
+      <stop offset="100%" style="stop-color:#E85D04"/>
+    </linearGradient>
+    <linearGradient id="gradCodex" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#17B890"/>
+      <stop offset="100%" style="stop-color:#0D9488"/>
+    </linearGradient>
+    <linearGradient id="gradKimi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F80ED"/>
+      <stop offset="100%" style="stop-color:#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="gradCursor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0B429"/>
+      <stop offset="100%" style="stop-color:#D97706"/>
+    </linearGradient>
+    
+    <filter id="bannerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bannerBg)" rx="8"/>
+  
+  <!-- Grid pattern overlay -->
+  <g opacity="0.05">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="800" height="200" fill="url(#grid)"/>
+  </g>
+  
+  <!-- Isometric office illustration (right side) -->
+  <g transform="translate(620, 100)" filter="url(#bannerGlow)">
+    <!-- Floor -->
+    <polygon points="-80,-25 0,-60 80,-25 0,10" fill="#1e1e32" opacity="0.6"/>
+    
+    <!-- Desk 1 - Claude -->
+    <g transform="translate(-40, -30)">
+      <polygon points="-18,-6 0,-14 18,-6 0,2" fill="#2d2d44"/>
+      <polygon points="-12,-10 -12,-22 12,-22 12,-10" fill="url(#gradClaude)"/>
+      <circle cx="14" cy="0" r="2.5" fill="#FF8C42"/>
+    </g>
+    
+    <!-- Desk 2 - Codex -->
+    <g transform="translate(40, -30)">
+      <polygon points="-18,-6 0,-14 18,-6 0,2" fill="#2d2d44"/>
+      <polygon points="-12,-10 -12,-22 12,-22 12,-10" fill="url(#gradCodex)"/>
+      <circle cx="14" cy="0" r="2.5" fill="#17B890"/>
+    </g>
+    
+    <!-- Desk 3 - Kimi -->
+    <g transform="translate(-40, 20)">
+      <polygon points="-18,-6 0,-14 18,-6 0,2" fill="#2d2d44"/>
+      <polygon points="-12,-10 -12,-22 12,-22 12,-10" fill="url(#gradKimi)"/>
+      <circle cx="14" cy="0" r="2.5" fill="#2F80ED"/>
+    </g>
+    
+    <!-- Desk 4 - Cursor -->
+    <g transform="translate(40, 20)">
+      <polygon points="-18,-6 0,-14 18,-6 0,2" fill="#2d2d44"/>
+      <polygon points="-12,-10 -12,-22 12,-22 12,-10" fill="url(#gradCursor)"/>
+      <circle cx="14" cy="0" r="2.5" fill="#F0B429"/>
+    </g>
+    
+    <!-- Central hub -->
+    <circle cx="0" cy="-5" r="6" fill="white" opacity="0.9"/>
+  </g>
+  
+  <!-- Text content (left side) -->
+  <g transform="translate(60, 100)">
+    <!-- Title -->
+    <text x="0" y="-20" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="white">
+      Agent Monitor
+    </text>
+    <text x="260" y="-20" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="300" fill="#9ca3af">
+      3D
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" fill="#6b7280">
+      Oficina virtual en tiempo real para visualizar agentes de código
+    </text>
+    
+    <!-- Agent badges -->
+    <g transform="translate(0, 45)">
+      <!-- Claude badge -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="-10" width="65" height="20" rx="10" fill="#FF8C42" opacity="0.15"/>
+        <circle cx="12" cy="0" r="4" fill="#FF8C42"/>
+        <text x="22" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#FF8C42">Claude</text>
+      </g>
+      
+      <!-- Codex badge -->
+      <g transform="translate(75, 0)">
+        <rect x="0" y="-10" width="60" height="20" rx="10" fill="#17B890" opacity="0.15"/>
+        <circle cx="12" cy="0" r="4" fill="#17B890"/>
+        <text x="22" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#17B890">Codex</text>
+      </g>
+      
+      <!-- Kimi badge -->
+      <g transform="translate(145, 0)">
+        <rect x="0" y="-10" width="55" height="20" rx="10" fill="#2F80ED" opacity="0.15"/>
+        <circle cx="12" cy="0" r="4" fill="#2F80ED"/>
+        <text x="22" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#2F80ED">Kimi</text>
+      </g>
+      
+      <!-- Cursor badge -->
+      <g transform="translate(210, 0)">
+        <rect x="0" y="-10" width="65" height="20" rx="10" fill="#F0B429" opacity="0.15"/>
+        <circle cx="12" cy="0" r="4" fill="#F0B429"/>
+        <text x="22" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#F0B429">Cursor</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Connection lines decoration -->
+  <g opacity="0.2" stroke="white" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="350" y1="60" x2="520" y2="60"/>
+    <line x1="350" y1="140" x2="520" y2="140"/>
+  </g>
+</svg>

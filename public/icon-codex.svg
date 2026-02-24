@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="codexBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#17B890"/>
+      <stop offset="100%" style="stop-color:#0D9488"/>
+    </linearGradient>
+    <filter id="codexGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="48" height="48" fill="#1a1a2e" rx="12"/>
+  
+  <!-- Codex as code brackets with circuit aesthetic -->
+  <g transform="translate(24, 24)" filter="url(#codexGlow)">
+    <!-- Left bracket -->
+    <path d="M-8,-10 L-14,-4 L-14,4 L-8,10" fill="none" stroke="url(#codexBg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Right bracket -->
+    <path d="M8,-10 L14,-4 L14,4 L8,10" fill="none" stroke="url(#codexBg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Center slash (code symbol) -->
+    <line x1="-2" y1="8" x2="2" y2="-8" stroke="url(#codexBg)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Circuit dots -->
+    <circle cx="-14" cy="-4" r="2" fill="url(#codexBg)"/>
+    <circle cx="-14" cy="4" r="2" fill="url(#codexBg)"/>
+    <circle cx="14" cy="-4" r="2" fill="url(#codexBg)"/>
+    <circle cx="14" cy="4" r="2" fill="url(#codexBg)"/>
+  </g>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f1a"/>
+    </linearGradient>
+    <linearGradient id="glowOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8C42"/>
+      <stop offset="100%" style="stop-color:#E85D04"/>
+    </linearGradient>
+    <linearGradient id="glowGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#17B890"/>
+      <stop offset="100%" style="stop-color:#0D9488"/>
+    </linearGradient>
+    <linearGradient id="glowBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F80ED"/>
+      <stop offset="100%" style="stop-color:#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="glowYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0B429"/>
+      <stop offset="100%" style="stop-color:#D97706"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Rounded background -->
+  <rect width="64" height="64" fill="url(#bgGrad)" rx="14"/>
+  
+  <!-- Simplified isometric office -->
+  <g transform="translate(32, 34)">
+    <!-- Central hub -->
+    <circle cx="0" cy="0" r="5" fill="#ffffff" filter="url(#softGlow)"/>
+    
+    <!-- Four agent nodes in diamond formation -->
+    <!-- Top - Claude (Orange) -->
+    <g transform="translate(0, -16)">
+      <polygon points="-6,-4 0,-8 6,-4 0,0" fill="url(#glowOrange)" filter="url(#softGlow)"/>
+      <polygon points="-6,-4 0,0 0,4 -6,0" fill="#b8562f"/>
+      <polygon points="6,-4 0,0 0,4 6,0" fill="#9a4826"/>
+    </g>
+    
+    <!-- Right - Codex (Green) -->
+    <g transform="translate(16, 0)">
+      <polygon points="-6,-4 0,-8 6,-4 0,0" fill="url(#glowGreen)" filter="url(#softGlow)"/>
+      <polygon points="-6,-4 0,0 0,4 -6,0" fill="#0d7a6e"/>
+      <polygon points="6,-4 0,0 0,4 6,0" fill="#0b6359"/>
+    </g>
+    
+    <!-- Bottom - Kimi (Blue) -->
+    <g transform="translate(0, 16)">
+      <polygon points="-6,-4 0,-8 6,-4 0,0" fill="url(#glowBlue)" filter="url(#softGlow)"/>
+      <polygon points="-6,-4 0,0 0,4 -6,0" fill="#1a5fc7"/>
+      <polygon points="6,-4 0,0 0,4 6,0" fill="#154fa3"/>
+    </g>
+    
+    <!-- Left - Cursor (Yellow) -->
+    <g transform="translate(-16, 0)">
+      <polygon points="-6,-4 0,-8 6,-4 0,0" fill="url(#glowYellow)" filter="url(#softGlow)"/>
+      <polygon points="-6,-4 0,0 0,4 -6,0" fill="#b88a1f"/>
+      <polygon points="6,-4 0,0 0,4 6,0" fill="#9a7319"/>
+    </g>
+    
+    <!-- Connection lines -->
+    <g opacity="0.5" stroke-width="1">
+      <line x1="0" y1="-5" x2="0" y2="-10" stroke="#FF8C42"/>
+      <line x1="5" y1="0" x2="10" y2="0" stroke="#17B890"/>
+      <line x1="0" y1="5" x2="0" y2="10" stroke="#2F80ED"/>
+      <line x1="-5" y1="0" x2="-10" y2="0" stroke="#F0B429"/>
+    </g>
+  </g>
+</svg>

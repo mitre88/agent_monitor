@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="cursorBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0B429"/>
+      <stop offset="100%" style="stop-color:#D97706"/>
+    </linearGradient>
+    <filter id="cursorGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="48" height="48" fill="#1a1a2e" rx="12"/>
+  
+  <!-- Cursor as precise targeting crosshair -->
+  <g transform="translate(24, 24)" filter="url(#cursorGlow)">
+    <!-- Outer targeting ring -->
+    <circle cx="0" cy="0" r="12" fill="none" stroke="url(#cursorBg)" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="url(#cursorBg)" stroke-width="1.5"/>
+    
+    <!-- Crosshair lines -->
+    <line x1="0" y1="-14" x2="0" y2="-4" stroke="url(#cursorBg)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="4" x2="0" y2="14" stroke="url(#cursorBg)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-14" y1="0" x2="-4" y2="0" stroke="url(#cursorBg)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="4" y1="0" x2="14" y2="0" stroke="url(#cursorBg)" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="3" fill="url(#cursorBg)"/>
+    
+    <!-- Corner brackets for precision feel -->
+    <path d="M-16,-16 L-10,-16 M-16,-16 L-16,-10" stroke="url(#cursorBg)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M16,-16 L10,-16 M16,-16 L16,-10" stroke="url(#cursorBg)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M-16,16 L-10,16 M-16,16 L-16,10" stroke="url(#cursorBg)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M16,16 L10,16 M16,16 L16,10" stroke="url(#cursorBg)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>
